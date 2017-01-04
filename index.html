@@ -616,32 +616,45 @@
       </div> <!-- end section-head -->
       <div class="row">
       	<div id="contact-form" class="six columns tab-whole left">
+
             <!-- form -->
-            <form name="contactForm" id="contactForm" method="post" action="inc/sendEmail.php"  >
-      			<fieldset>
+            <form name="contactForm" id="contactForm" method="post" action=""  >
+                <fieldset>
+
                   <div class="group">
- 						   <input name="contactName" type="text" id="contactName" placeholder="Nom" value="" minLength="2" />
+                           <input name="contactName" type="text" id="contactName" placeholder="Nom" value="" minLength="2" required />
                   </div>
                   <div>
-	      			   <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required />
-	               </div>
+                       <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required />
+                   </div>
                   <div>
-	     				   <input name="contactSubject" type="text" id="contactSubject" placeholder="Sujet"  value="" />
-	               </div>                       
+                           <input name="contactSubject" type="text" id="contactSubject" placeholder="Sujet"  value="" />
+                   </div>                       
                   <div>
-	                 	<textarea name="contactMessage"  id="contactMessage" placeholder="Message" rows="10" cols="50" required ></textarea>
-	               </div>                      
+                        <textarea name="contactMessage"  id="contactMessage" placeholder="Message" rows="10" cols="50" required ></textarea>
+                   </div>                      
                   <div>
-                     <input type="submit" value="Envoyer" class="submitform" />
+                     <button class="submitform">Envoyer</button>
+                     <div id="submit-loader">
+                        <div class="text-loader">Envoie en cours...</div>                             
+                          <div class="s-loader">
+                                    <div class="bounce1"></div>
+                                    <div class="bounce2"></div>
+                                    <div class="bounce3"></div>
+                                </div>
+                            </div>
                   </div>
-      			</fieldset>
-      		</form> <!-- Form End -->
+
+                </fieldset>
+            </form> <!-- Form End -->
+
             <!-- contact-warning -->
             <div id="message-warning"></div>
             <!-- contact-success -->
-      		<div id="message-success">
-               <i class="icon-ok"></i>Merci pour votre message! Nous vous répondons dans le plus court délai<br />
-      		</div>
+            <div id="message-success">
+               <i class="icon-ok"></i>Votre message est envoyé avec succès!<br />
+            </div>
+
          </div>
          <div class="six columns tab-whole right">
             <p class="lead">N'hésitez pas de nous contacter pour de plus amples informations, nous serons heureux de vous répondre.
