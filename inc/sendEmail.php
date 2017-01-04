@@ -1,7 +1,7 @@
 ﻿<?php
 
 // Replace this with your own email address
-$siteOwnersEmail = 'aassou.abdelilah@gmail.com';
+$siteOwnersEmail = 'aassou@nodomtech.com';
 
 
 if($_POST) {
